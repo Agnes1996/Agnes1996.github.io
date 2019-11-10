@@ -1,0 +1,55 @@
+I"�<blockquote>
+  <p>“Yeah It’s on. ”</p>
+</blockquote>
+
+<p>我的 Blog 就这么开通了。</p>
+
+<p>2018 年，总算有个地方可以好好写点东西了。</p>
+
+<p>一晃又一年，从荆州到武汉，再到广州，遇到的东西越来越多，也越来越觉得自己需要记录点什么。</p>
+
+<p>但是记在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不够自由，不能随便定制不好玩。</p>
+
+<p>直到在github上面发现了搭建博客的功能，重新唤醒了我写点什么的想法。</p>
+
+<p>今天，终于克服了懒癌，在无边的互联网空间里搭建了自己的一角，有种开荒建房的感觉，哈哈~</p>
+
+<p id="build"></p>
+
+<h2 id="正文">正文</h2>
+
+<p>接下来说说搭建这个博客的技术细节。</p>
+
+<p>正好之前就有关注过 <a href="https://pages.github.com/">GitHub Pages</a> + <a href="http://jekyllrb.com/">Jekyll</a> 快速 Building Blog 的技术方案，非常轻松时尚。</p>
+
+<p>其优点非常明显：</p>
+
+<ul>
+  <li><strong>Markdown</strong> 带来的优雅写作体验</li>
+  <li>非常熟悉的 Git workflow ，<strong>Git Commit 即 Blog Post</strong></li>
+  <li>利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
+    <ul>
+      <li>如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了</li>
+    </ul>
+  </li>
+  <li>Jekyll 的自定制非常容易，基本就是个模版引擎</li>
+</ul>
+
+<hr />
+<p>配置的过程中，基本就是git 的流程都相当顺手，后期本地用Jekyll运行网页还是费了一番功夫，折腾到大半夜终于弄好。</p>
+
+<p>大的 Jekyll 主题上直接 fork 了 Huax Blog</p>
+
+<p>本地调试环境需要 <code class="highlighter-rouge">gem install jekyll</code></p>
+
+<p>Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了。</p>
+
+<h2 id="后记">后记</h2>
+
+<p>回顾这个博客的诞生，纯粹是出于个人兴趣，也希望给自己更多的动力去学习，去写作。</p>
+
+<p>天空没有鸟的痕迹，但我已飞过。</p>
+
+<p>既然来到这个世界，就尽力留下自己的痕迹吧</p>
+
+:ET
