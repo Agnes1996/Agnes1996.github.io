@@ -5,8 +5,7 @@ date:       2019-04-03 12:00:00
 author:     "Liumt"
 header-img: "img/post-bg-miui6.jpg"
 tags:
-    - 笔记
-    - 产品
+    - 数据运营
 ---
 
 

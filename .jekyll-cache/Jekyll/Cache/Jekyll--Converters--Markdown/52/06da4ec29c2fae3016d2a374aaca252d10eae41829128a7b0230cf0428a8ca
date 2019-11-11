@@ -1,0 +1,78 @@
+I"
+<blockquote>
+  <p>BeautifulSoup库是解析，遍历，维护“标签树”代码的功能库；名字为beautifulsoup4或bs4；</p>
+</blockquote>
+
+<blockquote>
+  <p>引用方式为：from bs4 import BeautifulSoup  或者   import bs4；</p>
+</blockquote>
+
+<h1 id="beautifulsoup库的解析语法">beautifulsoup库的解析语法：</h1>
+
+<p>1 soup=BeautifulSoup(‘<name>...data...</name>’,’html.parser’)</p>
+
+<p>该函数表示以‘html.parser’的方式将’data’解析成BeautifulSoup类，存入对象soup中；</p>
+
+<p>2 soup.prettify()</p>
+
+<p>该函数为HTML文本对象soup增加\n，提高文本的可读性；</p>
+
+<p>3 type()</p>
+
+<p>可以返回标签的类型，或者标签属性的类型；</p>
+
+<p>4 bs4库默认将HTML文本以utf-8编码解析，Python3.x也是；</p>
+
+<h1 id="bs4库的遍历方法">bs4库的遍历方法：</h1>
+
+<p><img src="/img/in-post/post-python/search-bs4.jpg" alt="img" /></p>
+
+<h2 id="标签树下行遍历">标签树下行遍历</h2>
+<p>.contents 子节点的列表</p>
+
+<p>.children 子节点迭代 只能用在循环
+.descendants 子孙节点迭代 只能用在循环</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>for child in soup.body.children:
+    print(child)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="标签树的上行遍历">标签树的上行遍历</h2>
+
+<p>.parent
+.parents</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>r = requests.get("https://item.jd.com/100005297774.html")
+demo = r.text
+soup = BeautifulSoup(demo, "html.parser")
+for parent in soup.a.parents:
+    if parent is None:
+        print(parent)
+    else:
+        print(parent.name)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="平行遍历">平行遍历</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>for sibling in soup.div.next_siblings:
+    print(sibling)  
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>遍历后续平行节点 注意是siblings，只能用在循环</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>soup.div.previous_sibling  
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>查看div前一个节点</p>
+
+:ET
